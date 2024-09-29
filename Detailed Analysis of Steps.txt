@@ -1,0 +1,51 @@
+Problem Statement:
+
+The challenge is to decode and categorize the rich tapestry of newspaper articles using the latest advancements in Natural Language Processing (NLP) and Machine Learning (ML).The ability to automatically classify and organize news content is critical. 
+
+Proposed Solution:
+
+To develop innovative solutions that can accurately and efficiently categorize diverse articles, ranging from politics to sports, technology to health, and everything in between. We used Text classification, leveraging cutting-edge techniques to transform unstructured text into meaningful categories.
+
+Objective And Methodology Of Solution:
+
+Here I used Basic data reading and cleaning. After that I removed punctuations, stop words, lemmatization on my data and created a clean_data.pkl file. Then I split the data into train and test split for testing and checking accuracy. As data is Imbalanced so used SMOTE to balance it ,Then used TD-IDF method to categorize and vectorize the training data and created a td-idf.pkl file. 
+
+Then Using Logistic Regression Model Calculated the accuracy and all parameters as, Values of True Positives, True Negatives, False Positives and False Negatives
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+True Positives: 4287
+True Negatives: 12421
+False Positives: 171
+False Negatives: 368
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Evaluation Score Summary
+--------------------------------------------------
+Accuracy Score: 0.7
+Sensitivity/Recall Score: 0.92
+Specificity Score: 0.99
+Precision: 0.96
+F1 Score: 0.94
+
+To improve accuracy I have used XGBOOST Classifier too.The parameters are,
+
+Values of True Positives, True Negatives, False Positivies and False Negatives
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+True Positives: 4921
+True Negatives: 12580
+False Positives: 105
+False Negatives: 222
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Evaluation Score Summary
+--------------------------------------------------
+Accuracy Score: 0.77
+Sensitivity/Recall Score: 0.96
+Specificity Score: 0.99
+Precision: 0.98
+F1 Score: 0.97
+ 
+So In my analysis XGBoost performs well .And created logistic.pkl , xgboost.pkl file for testing.
+
+Then I used my test.csv and used all pickle files and tested the model and my submission.csv file.
